@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary-color: #6c5ce7;
-            --secondary-color: #a29bfe;
-            --accent-color: #fd79a8;
-            --dark-color: #2d3436;
-            --light-color: #f5f6fa;
-            --success-color: #00b894;
-            --warning-color: #fdcb6e;
-            --danger-color: #d63031;
+            --primary-color: #8A2BE2;
+            --secondary-color: #6A5ACD;
+            --accent-color: #9370DB;
+            --dark-color: #1A1A2E;
+            --light-color: #F0F8FF;
+            --success-color: #32CD32;
+            --warning-color: #FFD700;
+            --danger-color: #DC143C;
         }
         
         * {
@@ -25,7 +25,7 @@
         }
         
         body {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            background: linear-gradient(135deg, #1A1A2E 0%, #16213E 100%);
             color: var(--light-color);
             line-height: 1.6;
         }
@@ -38,165 +38,200 @@
         }
         
         header {
-            padding: 20px 0;
+            padding: 40px 0;
             text-align: center;
             position: relative;
             background: rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
+            border-radius: 15px;
             margin-bottom: 30px;
             margin-top: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
         
         .logo {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+            font-size: 3rem;
+            margin-bottom: 15px;
             color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .logo i {
-            margin-left: 10px;
+            margin-left: 15px;
         }
         
         h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+            font-size: 2.8rem;
+            margin-bottom: 15px;
             color: var(--primary-color);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
         
         h2 {
-            font-size: 2rem;
-            margin: 20px 0;
+            font-size: 2.2rem;
+            margin: 25px 0;
             color: var(--secondary-color);
+            border-right: 4px solid var(--accent-color);
+            padding-right: 15px;
         }
         
         h3 {
-            font-size: 1.5rem;
-            margin: 15px 0;
+            font-size: 1.7rem;
+            margin: 20px 0;
             color: var(--accent-color);
         }
         
         p {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             font-size: 1.1rem;
+            line-height: 1.8;
         }
         
         .btn {
             display: inline-block;
-            background: var(--primary-color);
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
             color: white;
-            padding: 12px 25px;
+            padding: 15px 30px;
             border-radius: 30px;
             text-decoration: none;
             font-weight: bold;
-            margin: 10px 5px;
+            margin: 15px 10px;
             transition: all 0.3s ease;
             border: none;
             cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         
         .btn:hover {
-            background: var(--secondary-color);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
         
         .btn-telegram {
-            background: #0088cc;
+            background: linear-gradient(45deg, #0088cc, #00aced);
         }
         
         .section {
-            padding: 40px 0;
+            padding: 50px 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
         }
         
         .feature-card {
             background: rgba(255, 255, 255, 0.05);
             border-radius: 15px;
-            padding: 25px;
+            padding: 30px;
             text-align: center;
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         .feature-card:hover {
             transform: translateY(-10px);
             background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
         }
         
         .feature-icon {
-            font-size: 3rem;
+            font-size: 3.5rem;
             color: var(--secondary-color);
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
         
         .instructions {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        .step-number {
+            background: var(--primary-color);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-left: 20px;
+            flex-shrink: 0;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .security-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .security-item {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .security-icon {
+            font-size: 3rem;
+            color: var(--success-color);
+            margin-bottom: 20px;
+        }
+        
+        .command-list {
             background: rgba(0, 0, 0, 0.2);
             padding: 25px;
             border-radius: 15px;
             margin: 25px 0;
         }
         
-        .step {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 20px;
-        }
-        
-        .step-number {
-            background: var(--primary-color);
-            color: white;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            margin-left: 15px;
-            flex-shrink: 0;
-        }
-        
-        .security-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        
-        .security-item {
-            background: rgba(0, 0, 0, 0.2);
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-        }
-        
-        .security-icon {
-            font-size: 2.5rem;
-            color: var(--success-color);
+        .command {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 8px;
             margin-bottom: 15px;
+            font-family: monospace;
+            border-right: 3px solid var(--accent-color);
         }
         
         footer {
             text-align: center;
-            padding: 30px 0;
+            padding: 40px 0;
             margin-top: 50px;
             background: rgba(0, 0, 0, 0.3);
-            border-radius: 10px;
+            border-radius: 15px;
         }
         
         .social-links {
-            margin: 20px 0;
+            margin: 25px 0;
         }
         
         .social-links a {
             color: var(--light-color);
-            font-size: 1.5rem;
-            margin: 0 10px;
+            font-size: 2rem;
+            margin: 0 15px;
             transition: color 0.3s ease;
         }
         
@@ -204,17 +239,36 @@
             color: var(--secondary-color);
         }
         
+        .badge {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin: 0 5px;
+        }
+        
         @media (max-width: 768px) {
             h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
             
             h2 {
-                font-size: 1.7rem;
+                font-size: 1.8rem;
             }
             
             .features {
                 grid-template-columns: 1fr;
+            }
+            
+            .step {
+                flex-direction: column;
+            }
+            
+            .step-number {
+                margin-left: 0;
+                margin-bottom: 15px;
             }
         }
     </style>
@@ -231,54 +285,89 @@
         </header>
 
         <section class="section">
-            <h2>مميزات البوت</h2>
+            <h2>المميزات الرئيسية للبوت</h2>
+            <p>بناءً على تحليل كود البوت، هذه هي الميزات الحقيقية التي يقدمها:</p>
+            
             <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-broadcast-tower"></i>
+                    </div>
+                    <h3>النشر التلقائي المتقدم</h3>
+                    <p>نشر تلقائي في القنوات والمجموعات مع تحديد أوقات النشر، تكرار النشر، وإدارة كليشات النشر</p>
+                    <span class="badge">ميزة حصرية</span>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-plus-circle"></i>
+                    </div>
+                    <h3>إنشاء وإدارة المجموعات</h3>
+                    <p>إنشاء مجموعات تلقائياً مع خيارات متقدمة للتحكم والإدارة، وجلب جميع مجموعات المستخدم</p>
+                    <span class="badge">ميزة حصرية</span>
+                </div>
+                
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-robot"></i>
                     </div>
-                    <h3>النشر التلقائي</h3>
-                    <p>نشر تلقائي في القنوات والمجموعات مع إمكانية تحديد أوقات النشر ومحتوى مخصص</p>
+                    <h3>انضمام ذكي للمجموعات</h3>
+                    <p>انضمام تلقائي للمجموعات عبر الروابط العامة وروابط الدعوة الخاصة مع معالجة جميع أنواع الروابط</p>
+                    <span class="badge">ميزة حصرية</span>
                 </div>
                 
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-users"></i>
+                        <i class="fas fa-coins"></i>
                     </div>
-                    <h3>إنشاء المجموعات</h3>
-                    <p>إنشاء مجموعات تلقائياً وإدارتها بسهولة مع خيارات متقدمة للتحكم</p>
+                    <h3>نظام النقاط والاشتراكات</h3>
+                    <p>نظام نقاط متكامل مع إمكانية الشراء والبيع والاشتراك في باقات VIP بمميزات حصرية</p>
+                    <span class="badge">ميزة حصرية</span>
                 </div>
                 
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-bullhorn"></i>
+                        <i class="fas fa-store"></i>
                     </div>
-                    <h3>الإذاعة والتنبيهات</h3>
-                    <p>إرسال رسائل جماعية وإشعارات لجميع أعضاء القنوات والمجموعات</p>
+                    <h3>سوق الخدمات</h3>
+                    <p>سوق متكامل لبيع وشراء الخدمات الرقمية باستخدام نقاط البوت مع نظام تقييم وآمان متكامل</p>
+                    <span class="badge">ميزة حصرية</span>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>نظام البريد الإلكتروني</h3>
+                    <p>إرسال رسائل بريد إلكتروني جماعية مع إدارة كاملة للحسابات والمستلمين</p>
+                    <span class="badge">ميزة حصرية</span>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-poll"></i>
+                    </div>
+                    <h3>الاستفتاءات والتقييمات</h3>
+                    <p>إنشاء استفتاءات وتقييمات مع إحصاءات مفصلة وتقارير عن النتائج</p>
+                    <span class="badge">ميزة حصرية</span>
                 </div>
                 
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>حماية متقدمة</h3>
-                    <p>نظام حماية متكامل ضد المخترقين والمزعجين مع خيارات حظر تلقائية</p>
+                    <h3>نظام الأمان المتقدم</h3>
+                    <p>حماية متقدمة للجلسات، كشف المحاولات المشبوهة، وتأكيد الهوية بنظام كابتشا</p>
+                    <span class="badge">ميزة حصرية</span>
                 </div>
                 
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-cogs"></i>
+                        <i class="fas fa-backup"></i>
                     </div>
-                    <h3>إعدادات مرنة</h3>
-                    <p>تخصيص كامل لإعدادات البوت لتتناسب مع احتياجاتك الخاصة</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-language"></i>
-                    </div>
-                    <h3>دعم عربي كامل</h3>
-                    <p>واجهة مستخدم عربية مع دعم فني متكامل باللغة العربية</p>
+                    <h3>نسخ احتياطي</h3>
+                    <p>نسخ احتياطي تلقائي لجميع البيانات والإعدادات مع إمكانية الاستعادة في أي وقت</p>
+                    <span class="badge">ميزة حصرية</span>
                 </div>
             </div>
         </section>
@@ -290,75 +379,101 @@
                     <div class="step-number">1</div>
                     <div>
                         <h3>البدء مع البوت</h3>
-                        <p>اضغط على زر "بدء استخدام البوت" أعلاه أو ابحث عن <strong>@D22FBot</strong> في التيليجرام</p>
+                        <p>ابدأ بالدخول إلى البوت عبر <a href="https://t.me/D22FBot" style="color: var(--accent-color);">@D22FBot</a> ثم اتبع خطوات التسجيل وإنشاء الحساب</p>
+                        <p class="command">/start - بدء استخدام البوت</p>
                     </div>
                 </div>
                 
                 <div class="step">
                     <div class="step-number">2</div>
                     <div>
-                        <h3>إضافة البوت إلى مجموعتك</h3>
-                        <p>أضف البوت إلى المجموعة أو القناة التي تريد إدارتها ومنحه الصلاحيات اللازمة</p>
+                        <h3>تسجيل الجلسة</h3>
+                        <p>سجل جلسة التيليجرام الخاصة بك في البوت للتمتع بجميع الميزات</p>
+                        <p class="command">/login - تسجيل الدخول بالرقم</p>
+                        <p class="command">تسجيل بالسيشن - إضافة جلسة مسبقة</p>
                     </div>
                 </div>
                 
                 <div class="step">
                     <div class="step-number">3</div>
                     <div>
-                        <h3>ضبط الإعدادات</h3>
-                        <p>استخدم الأوامر المختلفة لضبط إعدادات البوت حسب احتياجاتك</p>
+                        <h3>إضافة المجموعات</h3>
+                        <p>أضف مجموعاتك إلى البوت للبدء في إدارتها والاستفادة من ميزات النشر التلقائي</p>
+                        <p class="command">newSuper - إضافة مجموعة جديدة</p>
+                        <p class="command">scanAllGroups - جلب جميع مجموعاتك</p>
                     </div>
                 </div>
                 
                 <div class="step">
                     <div class="step-number">4</div>
                     <div>
-                        <h3>الاستفادة من المميزات</h3>
-                        <p>استخدم أوامر النشر التلقائي، إنشاء المجموعات، والإدارة المتقدمة</p>
+                        <h3>بدء النشر التلقائي</h3>
+                        <p>اضبط إعدادات النشر وابدأ في النشر التلقائي في مجموعاتك</p>
+                        <p class="command">startposting - بدء النشر التلقائي</p>
+                        <p class="command">waitTime - ضبط وقت الانتظار بين النشر</p>
                     </div>
                 </div>
             </div>
             
-            <div style="text-align: center; margin-top: 30px;">
+            <div style="text-align: center; margin-top: 40px;">
                 <a href="https://t.me/D22FBot" class="btn btn-telegram"><i class="fab fa-telegram"></i> تجربة البوت الآن</a>
             </div>
         </section>
 
         <section class="section">
-            <h2>الأمان والحماية</h2>
+            <h2>أوامر البوت الأساسية</h2>
+            
+            <div class="command-list">
+                <div class="command">/start - بدء استخدام البوت وإنشاء حساب</div>
+                <div class="command">/login - تسجيل الدخول بإضافة جلسة</div>
+                <div class="command">account - إدارة الحساب والجلسات</div>
+                <div class="command">newSuper - إضافة مجموعة جديدة</div>
+                <div class="command">currentSupers - عرض المجموعات المضافة</div>
+                <div class="command">captions - إدارة كليشات النشر</div>
+                <div class="command">startposting - بدء النشر التلقائي</div>
+                <div class="command">stopposting - إيقاف النشر التلقائي</div>
+                <div class="command">waitTime - ضبط مدة الانتظار بين النشر</div>
+                <div class="command">points_sub - نظام النقاط والاشتراكات</div>
+                <div class="command">marketplace - الدخول إلى سوق الخدمات</div>
+                <div class="command">mystats - عرض إحصائيات حسابك</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>نظام الأمان والحماية</h2>
             <p>يتميز البوت بنظام حماية متكامل لضمان أمان حسابك ومجموعاتك:</p>
             
             <div class="security-grid">
                 <div class="security-item">
                     <div class="security-icon">
-                        <i class="fas fa-lock"></i>
+                        <i class="fas fa-key"></i>
                     </div>
-                    <h3>حماية البيانات</h3>
-                    <p>جميع بياناتك محمية ومشفرة ولا يصل إليها أي طرف ثالث</p>
+                    <h3>حماية الجلسات</h3>
+                    <p>تشفير متقدم للجلسات مع تجديد تلقائي للحماية من الاختراق</p>
                 </div>
                 
                 <div class="security-item">
                     <div class="security-icon">
-                        <i class="fas fa-user-shield"></i>
+                        <i class="fas fa-user-check"></i>
                     </div>
-                    <h3>صلاحيات آمنة</h3>
-                    <p>نظام صلاحيات متطور يمنع أي وصول غير مصرح به إلى البوت</p>
+                    <h3>نظام كابتشا</h3>
+                    <p>تأكيد هوية المستخدمين الجدد عبر نظام كابتشا ذكي لمنع البوتات</p>
                 </div>
                 
                 <div class="security-item">
                     <div class="security-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>حماية من الاختراق</h3>
-                    <p>نظام متكامل للكشف والمنع من أي محاولات اختراق أو استخدام غير مصرح</p>
+                    <h3>مراقبة النشاط</h3>
+                    <p>مراقبة مستمرة للنشاط المشبوه وإجراءات الحماية التلقائية</p>
                 </div>
                 
                 <div class="security-item">
                     <div class="security-icon">
-                        <i class="fas fa-history"></i>
+                        <i class="fas fa-database"></i>
                     </div>
                     <h3>نسخ احتياطي</h3>
-                    <p>نظام نسخ احتياطي تلقائي يحفظ إعداداتك ويحميها من الفقدان</p>
+                    <p>نسخ احتياطي تلقائي يومي لجميع البيانات والإعدادات</p>
                 </div>
             </div>
         </section>
@@ -389,15 +504,13 @@
     </div>
 
     <script>
-        // يمكن إضافة أي交互ية يحتاجها الموقع هنا
+        // تأثيرات عند التمرير
         document.addEventListener('DOMContentLoaded', function() {
-            // تأثيرات بسيطة عند التمرير
             const featureCards = document.querySelectorAll('.feature-card');
             
             featureCards.forEach(card => {
                 card.addEventListener('mouseenter', function() {
                     this.style.transform = 'translateY(-10px)';
-                    this.style.transition = 'transform 0.3s ease';
                 });
                 
                 card.addEventListener('mouseleave', function() {
@@ -410,13 +523,22 @@
             
             buttons.forEach(btn => {
                 btn.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-3px)';
-                    this.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.2)';
+                    this.style.transform = 'translateY(-5px)';
                 });
                 
                 btn.addEventListener('mouseleave', function() {
                     this.style.transform = 'translateY(0)';
-                    this.style.boxShadow = 'none';
+                });
+            });
+            
+            // تأثير التمرير السلس للروابط
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
                 });
             });
         });
