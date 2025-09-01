@@ -1,102 +1,138 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>ViP UseR Bot - مميزات البوت</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-<style>
-  body { background: linear-gradient(135deg, #1A1A2E 0%, #16213E 100%); color: #F0F8FF; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:0; padding:20px; }
-  .container { max-width:1200px; margin:auto; }
-  nav { display:flex; justify-content:center; gap:20px; margin-bottom:30px; }
-  nav button { padding:10px 20px; border:none; border-radius:20px; cursor:pointer; background:#9370DB; color:white; transition: background 0.3s ease; }
-  nav button.active, nav button:hover { background:#8A2BE2; }
-  .page { display:none; }
-  .page.active { display:block; }
-  .features { display:grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap:25px; }
-  .feature-card { background:rgba(255,255,255,0.05); border-radius:15px; padding:20px; text-align:center; box-shadow:0 5px 10px rgba(0,0,0,0.2); transition:transform 0.3s ease; }
-  .feature-card:hover { transform: translateY(-10px); background:rgba(255,255,255,0.1); }
-  .feature-icon { font-size:3rem; margin-bottom:15px; color:#6A5ACD; }
-  h2 { margin-bottom:20px; color:#9370DB; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>بوت تيليجرام</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Tajawal", sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #4f46e5, #3b82f6);
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+    nav {
+      margin-top: .5rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+    section {
+      padding: 3rem 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: #eef2ff;
+      border-radius: 1rem;
+      margin-top: 1rem;
+    }
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: white;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,.1);
+      transition: transform .2s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #f3f4f6;
+      margin-top: 2rem;
+      font-size: .9rem;
+    }
+    .btn {
+      display: inline-block;
+      background: #4f46e5;
+      color: white;
+      padding: .7rem 1.5rem;
+      border-radius: .5rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background .2s;
+    }
+    .btn:hover {
+      background: #4338ca;
+    }
+  </style>
 </head>
 <body>
-<div class="container">
-  <nav>
-    <button class="tab-btn active" data-target="home">الرئيسية</button>
-    <button class="tab-btn" data-target="features">مميزات البوت</button>
-  </nav>
 
-  <section id="home" class="page active">
-    <h2>مرحباً بك في ViP UseR Bot</h2>
-    <p>البوت العربي المتقدم لإدارة مجموعاتك وقنواتك بكل سهولة.</p>
+  <header>
+    <h1>بوت تيليجرام المميز</h1>
+    <nav>
+      <a href="#features">المميزات</a>
+      <a href="#how">طريقة الاستخدام</a>
+      <a href="#contact">تواصل</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>أفضل بوت لإدارة قنواتك ومهامك</h2>
+    <p>كل ما تحتاجه من نشر تلقائي، إذاعة، إدارة اشتراكات VIP، وأكثر!</p>
+    <a class="btn" href="https://t.me/YourBotUsername" target="_blank">🚀 جرب الآن</a>
   </section>
 
-  <section id="features" class="page">
-    <h2>المميزات الرئيسية للبوت</h2>
+  <section id="features">
+    <h2>✨ المميزات</h2>
     <div class="features">
-      <div class="feature-card">
-        <div class="feature-icon"><i class="fas fa-broadcast-tower"></i></div>
-        <h3>النشر التلقائي المتقدم</h3>
-        <p>نشر تلقائي في مجموعات وقنوات متعددة مع تحكم كامل بالتوقيت.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon"><i class="fas fa-plus-circle"></i></div>
-        <h3>إنشاء وإدارة المجموعات</h3>
-        <p>إنشاء مجموعات بشكل آلي مع إدارة متقدمة وسهولة الإضافة.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon"><i class="fas fa-robot"></i></div>
-        <h3>انضمام ذكي للمجموعات</h3>
-        <p>دعم الروابط العادية وخاصّة مع التنبيهات الذكية لحالتها.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon"><i class="fas fa-coins"></i></div>
-        <h3>نظام النقاط والاشتراكات</h3>
-        <p>نظام نقاط متكامل يتيح الشراء، البيع، والاشتراك في الباقات VIP.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon"><i class="fas fa-store"></i></div>
-        <h3>سوق الخدمات</h3>
-        <p>بيع وشراء خدمات رقميّة آمنة مع نظام تقييم موثوق.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon"><i class="fas fa-envelope"></i></div>
-        <h3>نظام البريد الإلكتروني</h3>
-        <p>إرسال رسائل جماعية مع إدارة كاملة للحسابات والمستلمين.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon"><i class="fas fa-poll"></i></div>
-        <h3>الاستفتاءات والتقييمات</h3>
-        <p>إنشاء استفتاءات وتقييمات مع تقارير إحصائية مفصلة.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
-        <h3>نظام الأمان المتقدم</h3>
-        <p>حماية الجلسات ونظام كابتشا لمنع الاستخدام الغير شرعي.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon"><i class="fas fa-backup"></i></div>
-        <h3>نسخ احتياطي</h3>
-        <p>نسخ احتياطي كامل مع إمكانية استعادة إعداداتك وبياناتك.</p>
-      </div>
+      <div class="card">📌 نشر تلقائي في القنوات والمجموعات</div>
+      <div class="card">🗂️ إدارة أكثر من حساب (Multi-session)</div>
+      <div class="card">💬 دعم الرسائل النصية، الصور، الفيديو، الصوت، الملصقات</div>
+      <div class="card">🎯 إذاعة جماعية عبر الحساب أو البوت</div>
+      <div class="card">🔐 نظام اشتراكات VIP و Pro</div>
+      <div class="card">📊 إحصائيات دقيقة عن نشاطك</div>
     </div>
   </section>
-</div>
 
-<script>
-  const tabs = document.querySelectorAll('.tab-btn');
-  const pages = document.querySelectorAll('.page');
+  <section id="how">
+    <h2>📖 طريقة الاستخدام</h2>
+    <ol>
+      <li>اضغط على زر <strong>ابدأ</strong> في البوت.</li>
+      <li>سجل حسابك (جلسة تيليجرام).</li>
+      <li>اختر ما إذا كنت تريد النشر أو الإذاعة أو إدارة اشتراكاتك.</li>
+      <li>استمتع بالتحكم الكامل من خلال لوحة البوت البسيطة.</li>
+    </ol>
+  </section>
 
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      tabs.forEach(t => t.classList.remove('active'));
-      pages.forEach(p => p.classList.remove('active'));
-      tab.classList.add('active');
-      document.getElementById(tab.dataset.target).classList.add('active');
-    });
-  });
-</script>
+  <section id="contact">
+    <h2>📞 تواصل معنا</h2>
+    <p>للاستفسار أو الدعم الفني تواصل معنا على:</p>
+    <a class="btn" href="https://t.me/YourSupportUsername" target="_blank">الدعم الفني</a>
+  </section>
+
+  <footer>
+    © 2025 - جميع الحقوق محفوظة لبوت تيليجرام
+  </footer>
+
 </body>
 </html>
- 
